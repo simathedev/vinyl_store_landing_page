@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Vinyl Oddyssey',
+  title: 'Vinyl Odyssey',
   description: 'Vinyl store landing page',
 }
 
