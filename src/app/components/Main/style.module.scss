@@ -1,0 +1,45 @@
+.main{
+    display:flex;
+    flex-direction: column;
+    height:60vh;
+   // border:1px solid gold;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+
+}
+.main {
+    position: relative;
+    height: 100vh; /* Set the height as needed */
+  }
+  
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/vinyl3.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index:1;
+  }
+  
+  .content {
+    position: relative; /* Ensure content is on top of the background */
+    z-index: 1; /* Ensure content is on top of the background */
+    padding: 20px;
+    color: #fff; /* Set text color to be visible on the image */
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  }
+.title{
+font-weight: 300;
+font-size:5rem;
+}
+.description{
+font-size:2rem;
+color:#c9fd74;
+}

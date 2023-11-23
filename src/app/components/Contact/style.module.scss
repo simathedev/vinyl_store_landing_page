@@ -1,0 +1,116 @@
+.main{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    margin-bottom:4rem;
+   /* border:solid 1px black;*/
+
+}
+.main h1{
+    font-weight: 300;
+    font-size:3rem;
+    margin-top: 8rem;
+}
+
+.container {
+   // width:50%;
+    //margin:auto;
+    text-align: center;
+   /* border:1px solid pink;*/
+    position:relative;
+    margin: 3rem;
+  }
+  
+  .formContainer {
+    border-radius: 10px;
+    padding: 40px 10px;
+    margin-top: 20px;
+    box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .form {
+    display: grid;
+    gap: 15px;
+  
+    
+  }
+  .contactInfo{
+    font-weight: 400;
+    font-size:24px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+  }
+  
+  .contactDetails{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap:7px;
+  
+}
+  .formGroup {
+    display: flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content: center;
+    align-items:center;
+    /*border:1px orange solid;*/
+
+  }
+  .formGroup label{
+    //font-size:1.5rem;
+    font-weight: 300;
+  }
+  
+ .form input,
+ .form textarea {
+    width:50%;
+    padding: 14px;
+    box-sizing: border-box;
+    margin-bottom:1em;
+  }
+  .form textarea{
+    border-radius:10px;
+    margin-top:1em;
+    border: 1px solid #000000;
+  }
+  .form input{
+    border:none;
+    border-bottom: 2px solid #000000;
+  }
+  .buttonDiv{
+    display: flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content: center;
+    align-items:center;
+    padding:8px;
+   /* border:orangered 1px solid;*/
+  }
+  .submitButton {
+    background-color: #c9fd74;
+    color: black;
+    border: none;
+    width:8rem;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    //font-size: 1.4rem;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .submitButton:hover {
+    background-color: black;
+    color:#c9fd74;
+  }
+  

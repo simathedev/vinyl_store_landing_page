@@ -1,0 +1,28 @@
+.main{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+    justify-content: center;
+    background-color: black;
+    color:#c9fd74;
+
+}
+.main h1{
+    font-size:4rem;
+    //font-weight:bold;
+    z-index:3;
+
+
+}
+.box {
+    width: 150px;
+    height: 150px;
+    //background-image: white;
+    background-image: url('/images/about2.png');
+    background-size: cover;
+    background-position: center;
+    z-index:1;
+  }
+  

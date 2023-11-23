@@ -1,0 +1,100 @@
+.about{
+    display:flex;
+   // flex-direction: column;
+    align-items: center;
+  justify-content: center;
+    text-align: justify;
+    min-height: 60vh; 
+    margin-bottom:2rem;
+    position: relative;
+    //width:100%;
+    //border:1px solid orange;
+}
+.about h1{
+    font-weight: 300;
+    //font-size:4rem;
+}
+ 
+.backgroundImage {
+  position: absolute;
+  top: 60;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-image: url('/images/vinyl4.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 10%;
+  z-index:-1;
+}
+.description{
+//border: 1px solid purple;
+//padding:0rem 4rem 0rem 4rem;
+//margin: 2rem 3rem;
+//font-size:27px;
+
+}
+.paragraph{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    //margin:2rem;
+    gap:1.6rem;
+   // border: 1px solid blue;
+   // width:80%;
+  
+}
+.aboutContainer{
+  //border:1px solid red;
+  //position: absolute;
+ //width:70%;
+  
+}
+
+// Define screen sizes
+$xs: 200px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+
+// Media queries
+$screen-xs: "screen and (min-width: #{$xs})";
+$screen-sm: "screen and (min-width: #{$sm})";
+$screen-md: "screen and (min-width: #{$md})";
+$screen-lg: "screen and (min-width: #{$lg})";
+$screen-xl: "screen and (min-width: #{$xl})";
+
+// Example usage
+.selector {
+  // Styles for extra small screens and up
+  @media #{$screen-xs} {
+    .description{
+        border: 2px dashed orange;
+        padding:0rem 4rem 0rem 4rem;
+        margin: 0rem;
+        font-size:27px;
+        
+        }
+  }
+
+  // Styles for small screens and up
+  @media #{$screen-sm} {
+    // Your styles for small screens and up
+  }
+
+  // Styles for medium screens and up
+  @media #{$screen-md} {
+    // Your styles for medium screens and up
+  }
+
+  // Styles for large screens and up
+  @media #{$screen-lg} {
+    // Your styles for large screens and up
+  }
+
+  // Styles for extra large screens and up
+  @media #{$screen-xl} {
+    // Your styles for extra large screens and up
+  }
+}

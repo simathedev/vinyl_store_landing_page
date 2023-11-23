@@ -1,0 +1,103 @@
+.main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+    min-height:0vh;
+   // border:1px solid green;
+}
+.main h1{
+    font-weight: 300;
+    //font-size:4rem;
+    margin-top:12rem;
+}
+.description{
+    font-weight: 300;
+    //font-size:2rem;
+    margin: 2rem 0rem;
+    text-align: center;
+    align-items:center;
+}
+.teamMembers{
+   //border:1px solid orange;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+}
+.teamMember{
+    display:flex;
+    //flex-direction: row;
+    margin:2rem 0rem;
+   // border:1px solid black;
+    border-radius: 10px;
+    text-align:justify;
+    align-items: center;
+    padding:20px;
+    justify-content: space-evenly;
+    min-height:40vh;
+   
+}
+
+.teamMember:hover{
+    background-color: #f3fde2;
+    //min-height:50vh;
+}
+.teamMemberImage{
+border-radius:50%;
+padding:15px;
+}
+.memberName{
+    //font-size: 32px;
+    font-weight: 300;
+    border-bottom:1px solid gray;
+}
+.textContainer{
+//border:1px solid orangered;
+display: flex;
+display: flex;
+flex-direction: column;
+width:60%;
+padding:1rem;
+font-size:1.7rem;
+text-align:left;
+align-items: left;
+margin:1rem;
+}
+.memberDescription{
+    border-bottom:1px solid gray;
+}
+.memberOccupation{
+    border-bottom:1px solid gray;
+}
+.memberTraits{
+    border-bottom:1px solid gray;
+}
+.textContainer svg{
+    //border-bottom:1px solid gray;
+    padding-top:10px;
+}
+.imageContainer{
+//border:1px solid pink;
+position: relative;
+overflow: hidden;
+transition: transform 0.5s ease;
+}
+
+.rotateImage {
+    transition: transform 0.5s ease-in-out; /* Transition for smooth rotation */
+    transform-origin: center; /* Set the transform origin to the center */
+    animation: rotate 4s linear infinite; /* Apply infinite rotation animation */
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
