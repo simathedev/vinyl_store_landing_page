@@ -5,7 +5,7 @@ import aboutSVG from '../../../../public/images/about.svg';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-function index() {
+function Index() {
   const fadeInVariant = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay:0.2, ease: 'easeInOut' } },
@@ -31,4 +31,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

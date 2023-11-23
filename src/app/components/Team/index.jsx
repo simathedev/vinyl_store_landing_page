@@ -38,22 +38,23 @@ function Index() {
 
   const fadeInVariant = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay:0.2, ease: 'easeInOut' } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.2, ease: 'easeInOut' } },
   };
-  
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3, // Adjust this threshold as needed
-  });
 
+  const { ref: commonRef, inView: commonInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   return (
     <div className={styles.main}>
       <h1 className='xs:text-[2rem] sm:text-[2rem] md:text-[3rem] lg:text-[4rem] xl:text-[4rem]'>Meet The Team</h1>
-      <p className={`${styles.description} text-[18px] xs:text-[14px] sm:text-[14px] md:text-[18px] lg:text-[20px] xl:text-[20px] w-[40%]`}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, perspiciatis.</p>
+      <p className={`${styles.description} text-[18px] xs:text-[14px] sm:text-[14px] md:text-[18px] lg:text-[20px] xl:text-[20px] w-[40%]`}>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, perspiciatis.
+      </p>
       <div className={`${styles.teamMembers} gap-2 xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row`}>
         {teamMembers.map((member, index) => {
-          const [ref, inView] = useInView({
+          const { ref, inView } = useInView({
             triggerOnce: true,
             threshold: 0.1,
           });
@@ -65,16 +66,16 @@ function Index() {
               initial='hidden'
               animate={inView ? 'visible' : 'hidden'}
               variants={{
-                hidden: { opacity: 0, scale:0},
+                hidden: { opacity: 0, scale: 0 },
                 visible: {
                   opacity: 1,
-                  scale:1,
+                  scale: 1,
                   transition: { delay: 0, duration: 0.9, ease: [0.43, 0.13, 0.23, 0.96] },
                 },
               }}
               onMouseEnter={() => setHoveredMember(member.id)}
               onMouseLeave={() => setHoveredMember(null)}
-              ref={ref}
+              ref={ref || commonRef}
             >
               <div className={styles.imageContainer}>
                 <Image
@@ -88,7 +89,9 @@ function Index() {
               <div className={styles.textContainer}>
                 <p className={`${styles.memberOccupation} font-bold xs:text-[14px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px]}`}>{member.occupation}</p>
                 <p className={`${styles.memberName} text-[2.7rem] mt-4`}>{member.name}</p>
-                <p className={`${styles.memberDescription} py-6 xs:text-[16px] sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[22px]`}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nisi vel enim suscipit! Sed nesciunt explicabo voluptates reiciendis consequuntur quidem.</p>
+                <p className={`${styles.memberDescription} py-6 xs:text-[16px] sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[22px]`}>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nisi vel enim suscipit! Sed nesciunt explicabo voluptates reiciendis consequuntur quidem.
+                </p>
                 <FaItunesNote />
                 <p className={`${styles.memberTraits} xs:text-[14px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px]`}>{member.favGenres}</p>
                 <TbVinyl />

@@ -41,6 +41,7 @@ function Index() {
   <h3 className='font-bold text-[1.4rem] '>Links</h3>
   {links.map((link, i) => (
     <ScrollLink
+    key={i}
     to={link.href} // Use the href as the target ID
     spy={true}
     smooth={true}
