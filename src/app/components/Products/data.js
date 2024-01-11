@@ -44,21 +44,21 @@ export const recordDetails = [
 { id: 7, 
 artist:'Robert Glasper',
 name: 'Black Radio III',
-category:'Soul',
+category:'Soul & Jazz',
 image: '/images/v_7.png' 
 },
 { 
 id: 8,
 artist: 'Kokoroko',
 name:'Could We Be More',
-category:'Soul',
+category:'Soul & Jazz',
 image: '/images/v_8.png' 
 },
 { 
 id: 9, 
 artist: 'The Internet',
 name:'Ego Death',
-category:'Soul',
+category:'Soul & Jazz',
 image: '/images/v_9.png' 
 },
 ]

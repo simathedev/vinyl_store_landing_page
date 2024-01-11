@@ -36,6 +36,8 @@ function Member({ member, setHoveredMember, hoveredMember }) {
           alt={member.name}
           width={250}
           height={250}
+          priority={true}
+          loading='eager'
           className={`${styles.teamMemberImage} ${hoveredMember === member.id ? styles.rotateImage : ''}`}
         />
       </div>

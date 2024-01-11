@@ -22,9 +22,10 @@ function Record({ record }) {
   return (
     <motion.div
       className={`${styles.records} flex flex-col items-center justify-center`}
-      ref={ref}
+      //ref={ref}
       initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
+      //animate={inView ? 'visible' : 'hidden'}
+      whileInView="visible"
       variants={hoverEffect}
       whileHover="hover"
     >
@@ -81,8 +82,15 @@ function Index() {
   }, {});
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={inView ? "visible" : "hidden"} variants={fadeInVariant} className={styles.products}>
-      <h1>Products</h1>
+    <motion.div 
+    //ref={ref} 
+    initial="hidden" 
+   // animate={inView ? "visible" : "hidden"} 
+   whileInView="visible"
+    variants={fadeInVariant} 
+    className={styles.products}
+    >
+      <h1>Records</h1>
       {/* ... */}
       <div className={`${styles.vinyl} w-full sm:w-3/4 md:w-full lg:w-3/4 xl:w-3/4`}>
         {Object.entries(groupedRecords).map(([category, records]) => (
@@ -91,7 +99,8 @@ function Index() {
             <motion.div
               className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2"
               initial="hidden"
-              animate="visible"
+              //animate="visible"
+              whileInView="visible"
               variants={{ visible: stagger }}
             >
               {records.map((record) => (
